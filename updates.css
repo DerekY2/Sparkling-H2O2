@@ -132,6 +132,10 @@ body, html {
   margin-top: 40px;
 }
 
+.old-versions a{
+  color: rgb(197, 195, 195) !important;
+}
+
 .old-header{
   padding-bottom: 10px;
 }
