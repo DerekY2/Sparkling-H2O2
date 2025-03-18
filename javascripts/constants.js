@@ -5,6 +5,7 @@ class Interface {
   static nodes = document.querySelectorAll(".node");
   static staticNodes = document.querySelectorAll(".node.static.config");
   static nodeSelectors = document.querySelectorAll(".selector");
+  static localSelectors = document.querySelectorAll(".local-selector");
   static configBtns = document.querySelectorAll(".config-btn");
   static nodeLists = document.querySelectorAll('.sub-menu a')
   // Footer

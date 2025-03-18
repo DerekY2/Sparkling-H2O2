@@ -85,8 +85,23 @@ Interface.nodeSelectors.forEach(selector =>{
     if(selector.classList.contains('require-opened-cu')){
       loader['carleton'](selector)
     }else{
-      inject(selector.dataset.injection, selector.dataset.url)
+      if(selector.dataset.injection && selector.dataset.url){
+        inject(selector.dataset.injection, selector.dataset.url)
+      }
     }
+  })
+})
+
+Interface.localSelectors.forEach(selector=>{
+  selector.addEventListener("click", (e)=>{
+    if (e.target.closest(".config-btn")) {
+      // If so, stop the event from propagating to the parent
+      e.stopPropagation();
+      return;
+    }
+    e.preventDefault
+    let url = chrome.runtime.getURL(selector.dataset.url)
+    chrome.tabs.create({url})
   })
 })
 

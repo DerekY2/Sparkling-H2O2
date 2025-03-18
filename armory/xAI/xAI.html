@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chat - 10X Hub</title>
+  <link rel="shortcut icon" href="assets/10x-favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../boxicons-2.1.4/css/boxicons.css">
+</head>
+<body>
+  <a target="_blank" href="https://github.com/DerekY2/ext-privacy-policies/blob/main/10X%20AI%20TEST.md" class="privacy-policy-btn">Privacy Policy</a>
+  <p class="localhost-label hidden">localhost:5000</p>
+  <i class='host-icon bx bx-wifi'></i>
+  <div class="chat-window temp-chat-new first">
+    <div class="first-chat">
+      <div class="chat-header">
+        <img src="assets/10x-hub-icon.png" alt="10X Hub">
+        <p>How can I help you today?</p>
+      </div>
+      <div class="input-container">
+        <input type="text" class="user-input first-input" placeholder="Ask me anything...">
+        <button class="send-btn first-send"><i class='bx bxs-send'></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-window main-chat hidden">
+    <div class="chat-header">
+      <div class="chat-profile">
+        <img src="assets/10x-favicon.png" class="chat-icon change-model" alt="icon">
+        <p class="chat-title">OpenRouter: DeepSeek V3</p>
+        <img src="assets/deepseek-icon.png" class="chat-icon change-model model-icon" alt="icon">
+      </div>
+    </div>
+    <div class="chat-container">
+      <div class="info">
+        <!-- <img src="assets/sky-icon.png" alt="icon"> -->
+        <p>Chat started</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <input type="text" class="user-input main-input" placeholder="Send a message...">
+      <button class="send-btn main-send"><i class='bx bxs-send'></i></button>
+    </div>
+  </div>
+
+  <script src="xAI.js"></script>
+</body>
+</html>
