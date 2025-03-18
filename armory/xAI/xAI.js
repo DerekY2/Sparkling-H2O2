@@ -20,7 +20,7 @@ const localHostLabel = document.querySelector(".localhost-label")
 
 // on submit, run sendMessage()
 sendBtn.addEventListener("click", ()=>{
-    console.log('sending message');
+    // console.log('sending message');
     sendMessage(inputBox)
 });
 
@@ -78,7 +78,7 @@ hostIcon.addEventListener('click',()=>{
     updateHost()
     updateChatTitle()
     updateRoutes()
-    console.log(host)
+    // console.log(host)
 })
 
 async function sendMessage(input) {
@@ -92,12 +92,12 @@ async function sendMessage(input) {
     // Prevent use from sending anymore messages while the current message is being processed
     disable(true)
 
-    console.log(input.classList)
+    // console.log(input.classList)
     if(input==firstInput){
         firstChat.classList.add('hidden')
         chatWindow.classList.remove('hidden')
     }
-    console.log(input.classList)
+    // console.log(input.classList)
 
     // Create user chat bubble containing the message sent
     chatContainer.innerHTML += `<div class="user"><p>${message}</p></div>`;
@@ -106,7 +106,7 @@ async function sendMessage(input) {
 
     // Reset input box
     input.value = "";
-    console.log(JSON.stringify({ message }))
+    // console.log(JSON.stringify({ message }))
 
     // Keep history of messages for logging purposes
     messages.push({role: "user", content: message})
@@ -119,11 +119,11 @@ async function sendMessage(input) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message })
         });
-        console.log('POST\'d')
+        // console.log('POST\'d')
 
         // wait for response, then set to 'data'
         const data = await response.json();
-        console.log(data)
+        // console.log(data)
         // handle internal error within data
         if(data.error){
             chatContainer.innerHTML += `<div class="model"><img src="assets/10x-favicon.png" alt="icon"><div class="response-content">${data.error}</div></div>`;
