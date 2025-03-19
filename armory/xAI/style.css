@@ -355,6 +355,7 @@ body {
   right: 130px;
   top: 45px;
   position: fixed;
+  text-decoration: none;
 }
 
 .privacy-policy-btn:hover{
