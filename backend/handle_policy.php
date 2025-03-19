@@ -1,5 +1,6 @@
 <?php
   include 'dependencies';
+  
   $conn = new mysqli("Host IP", "User", "Auth", "Database"); // placeholder values for public release
 
   if ($conn->connect_error) {
