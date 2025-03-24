@@ -77,11 +77,11 @@ function getDefaultTerm() {
 
   if (month >= 1 && month <= 3) {
     term = '10';
-  } else if (month >= 3 && month <= 7) {
+  } else if (month >= 4 && month <= 7) {
     term = '20';
-  } else if (month >= 8 && month <= 10) {
+  } else if (month >= 8 && month <= 11) {
     term = '30';
-  } else if (month == 11) {
+  } else if (month == 12) {
     term = '10';
     year = String(Number(year) + 1);
   } else {
